@@ -783,15 +783,15 @@ class b3dict( MutableMapping ):
             if node['offset'] == self.__tree_header['root_offset']:
                 return { 'min': 0, 'max': 0, 'upper_offset': 0 }
             else:
-                print("Node em "+str(offset)+" tem = "+str(len( node['key'] ))+" nodes, quando num_keys = "+str(self.__tree_header['num_keys']))
+                print("Node in "+str(offset)+" have = "+str(len( node['key'] ))+" nodes, when num_keys = "+str(self.__tree_header['num_keys']))
                 return None
 
         if node['left_node'] != left:
-            print("Node em "+str(offset)+" pensa que left = "+str(node['left_node'])+", quanto na verdade left = "+str(left))
+            print("Node in "+str(offset)+" perceives that left = "+str(node['left_node'])+", when it really is left = "+str(left))
             return None
 
         if node['right_node'] != right:
-            print("Node em "+str(offset)+" pensa que right = "+str(node['right_node'])+", quanto na verdade right = "+str(right))
+            print("Node in "+str(offset)+" perceives thar right = "+str(node['right_node'])+", when it really is right = "+str(right))
             return None
 
         # Initialize max and min
